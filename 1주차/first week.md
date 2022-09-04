@@ -15,6 +15,25 @@
 
 - ### CodeBlock
 
+    ~~~java
+    public class Test{
+      public static void main(String[] args){
+        System.out.println("Hello, World!");
+      }
+    }
+    ~~~
+
+    ~~~c
+    #include<stdio.h>
+    
+    int main(void){
+      
+      printf("Hello, World!\n");
+      
+      return 0;
+    }
+    ~~~
+
     ~~~~Language
     ~~~Language
     Main Code

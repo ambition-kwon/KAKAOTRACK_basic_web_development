@@ -115,19 +115,72 @@ brew install --cask sourceTree
 
 
 
-## Github Repositry 생성 & Local Git과 연동(수요일)
+## Github Repository 생성 & Local Git과 연동
 
+### 1. 깃허브 접속 및 계정생성([Github](https://github.com/))
 
+### 2. Github Repository 생성
 
+- Repositories -> New -> Repository name 기입 -> `public` -> Create repository
 
+### 3. Local Repository 생성 및 Github 연동(Terminal)
 
+- 빈 디렉터리 생성
 
+    ~~~
+    mkdir 디렉터리명
+    ~~~
+
+- 생성된 디렉터리로 이동
+
+    ~~~
+    cd 디렉터리명
+    ~~~
+
+- Git 초기화
+
+    ~~~
+    git init
+    ~~~
+
+- 최초 사용자 정보 입력
+
+    ~~~
+    git config --global user.name "유저이름"
+    git config --global user.email "Github계정"
+    ~~~
+
+- 연동할 Github Repository의 Path 추가
+
+    ~~~
+    git remote add origin Repo_HTTPS
+    ~~~
+
+- README.md 파일 생성
+
+    ~~~
+    echo 본문내용 >> README.md
+    ~~~
+
+- 디렉터리 연동
+
+    ~~~
+    git add -A
+    git commit -m "messages"
+    git push origin master
+    ~~~
+
+- Github Access Token입력
+
+    `Windows` : 로그인 창에서 Github 계정으로 로그인
+
+    `Mac OS` : Github -> Settings -> Developer settings -> Personal access tokens -> Generate new token
 
 ----------------------
 
 
 
-## Intellij IDEA 설치 & 학생 License 발급받기(목요일)
+## IntelliJ IDEA 설치 & 학생 License 발급받기(목요일)
 
 
 

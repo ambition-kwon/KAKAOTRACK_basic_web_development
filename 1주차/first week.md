@@ -180,41 +180,26 @@ brew install --cask sourceTree
 
 
 
-## IntelliJ IDEA 설치 & 학생 License 발급받기(목요일)
+## IntelliJ IDEA 설치 & 학생 License 발급받기
 
+### 1. IntelliJ IDEA 설치(Homebrew)
 
+~~~
+brew install --cask intellij-idea
+~~~
 
+### 2. IntelliJ Education License 발급
 
+- [Jetbrains](https://www.jetbrains.com/ko-kr/community/education/#students) -> `학생 및 교사용` -> `대학 이메일로 발급`->`Jetbrain Sign up`
 
+### 3. IntelliJ IDEA Login
 
+> 참조 : [제주대학교 포털](https://portal.jejunu.ac.kr/user/login.face?destination=%2Fportal%2F)(이메일 생성)
 
 ---------------
 
 
 
-## Programmers 계정 생성(목요일)
+## Programmers 계정 생성
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- ### [Programmers](https://programmers.co.kr/?utm_source=google&utm_medium=cpc&utm_campaign=brand_prgms_pc&gclid=Cj0KCQjw39uYBhCLARIsAD_SzMSwbo-It90O37C4B4ElRR4S3vRRHTegYw9EgXc12Z3AhJN9mtuAjCUaAmPuEALw_wcB) -> `회원가입`

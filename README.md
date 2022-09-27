@@ -42,8 +42,8 @@
 
 -------------------
 
-- 3-1(9/26/월요일) -> 
-- 
+- 3-1(9/26/월요일) -> git branch, git merge, git rebase, pull request 복습
+- 3-2(9/27/화요일) -> 삽입정렬 개인공부, programmers문제풀이
 
 ### ✍️주차별 Problem Solving Log
 

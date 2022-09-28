@@ -51,9 +51,37 @@ git rebase master
 
 ----
 
+## git .ignore관련 문법(복습)
 
+- `git ignore` :git을 통해 버전 관리를 하게 되면 항상 모든 파일이 git status상에 존재하게 된다(추가 시켰든 / 아니든). 하지만 특정 파일은 관리하고 싶지 않을 때가 있는데(실행파일류), 이때 사용하게 되는것이 `.gitignore`이다. 한마디로 말해 **project상에 원하지 않는 파일들을 git에서 제외시킬수 있는 설정파일**이다.
 
+- 조건 : `.gitignore`은 항상 최상위 디렉터리에 존재해야한다.
 
+- 문법
+
+    ~~~
+    # : 주석(파이썬과 동일)
+    *.py : .py확장자를 가진 모든 파일을 제외
+    *.java : java확장자를  가진 모든 파일을 제외
+    !important.py : .py가 무시되었지만, important.py만큼은 제외 시키지 않음
+    test/ : test폴더 안에있는 모든 파일, 디렉터리 무시하기
+    test.java : 루트 디렉터리에 있는 test.java파일 '만'무시
+    test/test.java : test디렉터리에 있는 test.java파일 '만'무시
+    /test.java : 현재 디렉토리에 있는 /test.java파일은 무시되지만, subDir/test.js 같이 특정 디렉토리 하위에 있는 test.java는 무시되지 않음
+    src/*.js : src/ 하위의 .js파일만 무시
+    src/**/*.txt : src/ 하위에 존재하는 모든 디렉토리의 .txt 파일을 무시
+    /**/*.js : 현재 디렉토리와 그 하위 디렉토리 내에 존재하는 모든 .js 파일을 무시
+    ~~~
+
+    >  [.gitignore 자동생성 홈페이지](https://www.toptal.com/developers/gitignore)
+
+- ~~.java파일을 gitignore하고 싶은데, 이미 다른 자바 파일이 commit되어 있으면 제대로 적용되지 않는다. 이때 해결방법은 아래와 같다.
+
+~~~
+git rm -r --cached .
+git add -A
+git commit -m "fixed untracked files"
+~~~
 
 
 

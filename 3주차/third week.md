@@ -83,13 +83,31 @@ git add -A
 git commit -m "fixed untracked files"
 ~~~
 
+-----
+
+## git revert, reset, cherry-pick(복습)
+
+- 협업시 : `reset` <<<<< `revert`
+- `reset` : **과거로 되돌리겠다는 내용의 기입 X**, 아예 과거로 회귀가능하며 이력을 남기지 않고 원하는 시점으로 되돌아갈 수 있다.
+- `revert` : **과거로 되돌리겠다는 내용의 기입 O**, 이력을 남겨두고 원하는 시점으로 돌아가기때문에 과거로 되돌리는 이유 등을 기입할 수 있다.
+- `reset 사용법`**(ID를 기준 저장된 내용으로 되돌린다)**
+
+~~~
+git reset --soft [ID] // 커밋이후 변경된 내용들은 존재하되(staging area), commit기록만 말소
+git reset --mixed [ID] // 커밋이후 변경된 내용들은 존재하되(working directory), commit기록만 말소
+git reset --hard [ID] // 커밋이후 변경된 내용들 기록 자체 말소
+~~~
+
+- `revert 사용법`**(ID를 기준으로 -1번째 저장된 내용으로 되돌린다)**
+    - 예를들어 현재 "3-2"이고, "3-1" commit으로 revert하려면, 3-2를 기준으로 revert시키면 된다.(revert는 해당 커밋의 영향으로 +,- 된 변화량을 -,+로 변화시키기 때문)
+    - 무조건 가장 최신의 커밋부터 revert해줘야 충돌이 나지 않는다. reset과 달리 하나하나 차근차근 내려가야 한다.
 
 
-
-
-
-
-
+~~~
+git revert HEAD
+git revert HEAD^
+git revert HEAD^^
+~~~
 
 
 

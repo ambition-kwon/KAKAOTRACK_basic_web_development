@@ -731,7 +731,7 @@ public override void OnClick(){
     - 가상함수(OnClick)를 overriding
 - 아래는 이 모든 내용을 적용한 포함한 최종 코드이다.
 
-```csharp
+```c#
 using System;
 
 class Base
@@ -793,3 +793,53 @@ public class Delegate{Main(){...}}
 ---
 
 - 응용 프레임워크 : 이미 만들어져 있는 거대한 코드 덩어리
+
+```c#
+using System;
+
+class Form
+{
+    public delegate void EventHandler();
+    public EventHandler Click = null;
+    public Form()
+    {
+        
+    }
+    public virtual void OnClick()
+    {
+        if (Click != null)
+            Click();
+    }
+}
+class Application
+{
+    public static void Run(Form gildong)
+    {
+        gildong.OnClick();
+    }
+}
+class Derived : Form
+{
+    public Derived()
+    {
+        Click = new EventHandler(xxx);
+    }
+    public void xxx()
+    {
+        Console.WriteLine("클릭!");
+    }
+    public override void OnClick()
+    {
+        base.OnClick();
+        Console.WriteLine("이거 하나 추가 하려고 멀리 돌아왔다~");
+    }
+}
+class Delegate
+{
+    static void Main()
+    {
+        Application.Run(new Derived());
+    }
+}
+```
+
